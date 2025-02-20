@@ -1,0 +1,20 @@
+.list_item {
+    text-decoration: none;
+    color: var(--color-black);
+    position: relative;
+}
+
+.list_item::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-list-item-underline);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.list_item:hover::after {
+    width: 100%;
+}
